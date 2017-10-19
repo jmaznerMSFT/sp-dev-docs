@@ -58,7 +58,6 @@ Some field types require a bit of extra work to retrieve their values. Person fi
 }
 ```
 Lookup fields are also represented as objects; the display text is stored in the **lookupValue** property. This example works with a lookup field.
-
 ```JSON
 {
    "elmType": "div",
@@ -75,7 +74,7 @@ The following image shows an example of conditional formatting applied to a numb
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
 This example customizes a number field to color that field yellow when its value is 70 or less. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than or equal to 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
-Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If @currentField <= 70 Then class = sp-field-severity--warning.
+Note: this example uses a binary operation with the less-than-or-equal operator, "<=", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If `@currentField <= 70` Then `class = sp-field-severity--warning` Else `do not modify the default class`.
 
 ```JSON
 {
